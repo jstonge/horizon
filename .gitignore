@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+
+# Personal Obsidian plugins and their state — Claudian keeps chat history here
+.obsidian/plugins/
+.obsidian/community-plugins.json
+.claudian/

@@ -1,0 +1,44 @@
+# vaultkit config. `vaultkit` finds this file by walking up from wherever it runs.
+name = "horizon"
+
+# The OKF bundle: every .md in it is a concept and needs a `type:`. Project
+# files — this one, AGENTS.md, my-templates/, .obsidian/ — sit outside it, so
+# the bundle can be handed to any OKF consumer as-is.
+bundle = "kb"
+okf_version = "0.2"
+templates_dir = "my-templates"
+
+# The frontmatter list that groups reading notes, the way `harness` does in a
+# vault about agent harnesses. It also names a flag: `vaultkit note --topic a,b`.
+group_by = "topic"
+group_label = "Topic"
+
+# Paths in the bundle that aren't concepts. Dot-folders are always skipped.
+exclude = []
+
+[synth]
+columns = ["What it is", "The distinctive move"]
+
+# One table per template in my-templates/. `folder` is relative to the bundle,
+# "" being its root. `authored` seeds an `### <author>` heading; `archive`
+# fetches the URL into sources/; `index_by` groups that folder's index.md.
+[templates.reading]
+folder = "reading"
+authored = true
+archive = true
+index_by = "topic"
+description = "One note per source read: an agent summary, then our takes."
+
+[templates.synthesis]
+folder = "synthesis"
+authored = true
+description = "Surveys compiled across the reading notes."
+
+[templates.who]
+folder = "who"
+index_by = "kind"
+description = "The people and organisations behind the sources."
+
+[templates.atomic]
+folder = ""
+description = "Our own thinking, one idea per note."

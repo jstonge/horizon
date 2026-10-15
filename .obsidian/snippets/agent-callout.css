@@ -1,0 +1,45 @@
+/* A callout type for anything an agent wrote, so generated prose is visibly
+   distinct from what a human argued. See AGENTS.md.
+
+   Colours are set explicitly rather than only through --callout-color,
+   because how a theme consumes that variable varies. The icon is the Lucide
+   bot glyph, so it takes the orange and shifts with light/dark mode. To
+   retune, change the rgb() values per block. Obsidian reloads on save.
+
+     amber   245, 158, 11   warmer, more yellow
+     orange  249, 115, 22   vivid, middle of the road
+     carrot  230, 126, 34   earthier, closer to brown
+*/
+
+.callout[data-callout="agent"] {
+    --callout-color: 234, 88, 12;
+    --callout-icon: lucide-bot;
+    background-color: rgba(234, 88, 12, 0.08);
+    border: 1px solid rgba(234, 88, 12, 0.35);
+    border-left: 4px solid rgb(234, 88, 12);
+    mix-blend-mode: normal;
+}
+
+.callout[data-callout="agent"] .callout-title,
+.callout[data-callout="agent"] .callout-title-inner {
+    color: rgb(194, 65, 12);
+}
+
+.callout[data-callout="agent"] .callout-icon,
+.callout[data-callout="agent"] .callout-icon svg {
+    color: rgb(194, 65, 12);
+}
+
+.theme-dark .callout[data-callout="agent"] {
+    --callout-color: 251, 146, 60;
+    background-color: rgba(251, 146, 60, 0.10);
+    border-color: rgba(251, 146, 60, 0.35);
+    border-left-color: rgb(251, 146, 60);
+}
+
+.theme-dark .callout[data-callout="agent"] .callout-title,
+.theme-dark .callout[data-callout="agent"] .callout-title-inner,
+.theme-dark .callout[data-callout="agent"] .callout-icon,
+.theme-dark .callout[data-callout="agent"] .callout-icon svg {
+    color: rgb(251, 146, 60);
+}

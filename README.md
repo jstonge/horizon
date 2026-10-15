@@ -61,4 +61,3 @@ It answers in chat and never edits the note.
 them. `vaultkit check` says whether the bundle conforms to OKF.
 
 The conventions agents follow are in [AGENTS.md](AGENTS.md).
-# horizon

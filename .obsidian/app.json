@@ -1,0 +1,8 @@
+{
+  "promptDelete": false,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "kb"
+}
